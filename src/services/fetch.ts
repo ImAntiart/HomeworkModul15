@@ -9,7 +9,7 @@ export const getPosts = async () => {
     const data = await res.json();
     return data;
   } else {
-    throw new Error('Failed to load posts. \nThe server is not responding');
+    throw new Error('Не удалось загрузить сообщения. Cервер не отвечает');
   }
   // } catch (error) {
   //   return error;

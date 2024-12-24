@@ -1,8 +1,46 @@
+:root {
+  --font-roboto-r: 'Roboto Regular';
+  --font-manrope-m: 'Manrope Medium';
+  --font-manrope-sb: 'Manrope SemiBold';
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  --dark1: #111;
+  --dark2: #222;
+  --dark3: #333;
+  --dark4: #444;
+  --dark5: #555;
+
+  --red1: #b3261e;
+
+  --orange: #f5bd69;
+  --orange2: #f7a01f;
+  --gold: #fff387;
+  --white: #fff;
+  --green1: #67b86b;
+  --green2: #286e2c;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --like-post: #7e5252;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+
 #root {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   text-align: center;
-  background: var(--m3-sys-light-background);
+  background: var(--dark5);
 }
 
 .logo {
@@ -16,12 +54,12 @@
   transition: filter 300ms, -webkit-filter 300ms;
 }
 .logo:hover {
-  -webkit-filter: drop-shadow(0 0 2em #646cffaa);
-  filter: drop-shadow(0 0 2em #646cffaa);
+  -webkit-filter: drop-shadow(0 0 2em green);
+  filter: drop-shadow(0 0 2em green);
 }
 .logo.react:hover {
-  -webkit-filter: drop-shadow(0 0 2em #61dafbaa);
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  -webkit-filter: drop-shadow(0 0 2em green);
+  filter: drop-shadow(0 0 2em green);
 }
 
 @-webkit-keyframes logo-spin {

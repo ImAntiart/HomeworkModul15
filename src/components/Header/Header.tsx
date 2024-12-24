@@ -11,21 +11,26 @@ interface Props {
   };
 }
 
+
+
 const HeaderContainer = styled.div`
-  width: 84%;
-  height: 100px;
-  background: var(--m3-sys-light-background);
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  background: var(--dark3);
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 auto;
 `;
 const HeaderTitle = styled.h1`
+  padding-left: 5%;
   margin: 0;
   font-family: var(--font-roboto-r);
   font-size: 3.2em;
   line-height: 1.1;
-  color: #213547;
+  color: #fff;
 `;
 
 function Header(props: Props) {
@@ -44,7 +49,7 @@ function Header(props: Props) {
       }
     >
       <HeaderTitle style={isMobile ? { fontSize: '2.8em' } : {}}>
-        Review of posts
+        Лента новостей
       </HeaderTitle>
       <NavigationBtns
         onNextPageClick={onNextPageClick}

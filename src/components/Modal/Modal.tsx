@@ -42,7 +42,7 @@ const ModalBody = styled.div`
   overflow: hidden;
   position: relative;
   padding: 40px;
-  background-color: var(--m3-sys-light-surface-variant);
+  background-color: var(--dark3);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   max-height: auto;
@@ -61,10 +61,10 @@ const ModalFieldsWrapper = styled.div`
 
 const ModalBtn = styled.button`
   display: block;
-  max-width: 102px;
+  max-width: 150px;
   width: 100%;
   height: 40px;
-  
+  text-align: center;
 `;
 
 const Modal:FC <Props>= ({post}) => {
@@ -149,12 +149,12 @@ const Modal:FC <Props>= ({post}) => {
         <div className={style.modalBtnsWrapper}>
         <ModalBtn className={style.modalBtn} onClick={handleClickOk}>
           <span className={style.modalBtnSpan}>
-            Accept
+            Подтвердить
           </span>
         </ModalBtn>
-        <ModalBtn className={style.modalBtn} style={{background:'var(--m3-sys-light-error)'}} onClick={handleClickCancel}>
+        <ModalBtn className={style.modalBtn} style={{background:'var(--red1)'}} onClick={handleClickCancel}>
           <span className={style.modalBtnSpan}>
-          cancel
+          Отмена
           </span>
         </ModalBtn>
         </div>

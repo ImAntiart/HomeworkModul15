@@ -40,8 +40,8 @@ const Avatar = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background: var(--m3-sys-light-primary);
-  color: ;
+  background: var(--orange);
+  color: dark1;
   display: flex;
   flex: 0 0 auto;
   align-items: center;
@@ -59,7 +59,7 @@ const AvaLеtter = styled.p`
   line-height: 150%;
   letter-spacing: 0.01em;
   text-align: center;
-  color: var(--m3-sys-light-background);
+  color: var(--dark1);
   cursor: pointer;
 `;
 const CardImg = styled.div`
@@ -87,7 +87,7 @@ const CardTitle = styled.h3`
 export const CardText = styled.p`
   font-family: var(--font-roboto-r);
   font-size: 0.88rem;
-  color: #555;
+  color: var(--gold);
   @media (max-width: 1440px) {
     height: 60px;
     margin-top: 10px;
@@ -95,6 +95,8 @@ export const CardText = styled.p`
     overflow: scroll;
   }
 `;
+
+
 const MenuWrapper = styled.div`
   position: relative;
   width: 48px;
@@ -116,7 +118,7 @@ const MenuLink = styled.a`
   cursor: pointer;
 `;
 const MenuList = styled.ul`
-  width: 100px;
+  width: 130px;
   position: absolute;
   top: 20px;
   right: 0px;
@@ -124,7 +126,7 @@ const MenuList = styled.ul`
   display: flex;
   flex-direction: column;
   z-index: 100;
-  background: var(--m3-sys-light-primary);
+  background: var(--orange);
   border-radius: 12px;
   opacity: 1;
   @media (max-width: 1440px) {
@@ -132,14 +134,16 @@ const MenuList = styled.ul`
   }
 `;
 const MenuItem = styled.li`
-  list-style-type: none;
-  width: 100%;
-  padding: 6px 0px;
-  user-select: none;
-  &:active {
-    transform: scale(1.2);
-    opacity: 0.1;
-  }
+list-style-type: none;
+width: 100%;
+padding: 6px 0px;
+user-select: none;
+outline: 1px solid black; 
+outline-offset: -2px;
+&:active {
+transform: scale(1.2);
+opacity: 0.1;
+}
 `;
 
 function PostCard(props: IPost) {
@@ -185,7 +189,7 @@ function PostCard(props: IPost) {
         style={
           like
             ? { backgroundColor: 'var(--like-post)' }
-            : { backgroundColor: 'var(--m3-sys-light-surface-variant)' }
+            : { backgroundColor: 'var(--dark3)' }
         }
       >
         <CardHeader>
@@ -216,7 +220,7 @@ function PostCard(props: IPost) {
               style={
                 isOpen
                   ? {
-                      background: 'var(--m3-sys-light-primary)',
+                      background: 'var(--orange)',
                       opacity: '1',
                       borderRadius: '12px 12px 0px 12px',
                     }
@@ -230,7 +234,7 @@ function PostCard(props: IPost) {
                   isOpen
                     ? {
                         transform: 'rotate(90deg)',
-                        background: 'var(--m3-sys-light-primary)',
+                        background: 'var(--orange)',
                       }
                     : { transform: 'rotate(0deg)' }
                 }
@@ -241,7 +245,7 @@ function PostCard(props: IPost) {
                 <MenuItem>
                   <AvaLеtter data-ed onClick={()=>{
                     handleClickEdit(id);
-                  }}>Edit</AvaLеtter>
+                  }}>Редактировать</AvaLеtter>
                 </MenuItem>
                 <MenuItem>
                   <AvaLеtter
@@ -249,7 +253,7 @@ function PostCard(props: IPost) {
                       handleClickDel(id);
                     }}
                   >
-                    Delete
+                    Удалить
                   </AvaLеtter>
                 </MenuItem>
                 <MenuItem>
@@ -258,7 +262,7 @@ function PostCard(props: IPost) {
                       handleClickLike(id);
                     }}
                   >
-                    {like ? 'Del favourites' : 'Add favourites'}
+                    {like ? 'Убрать из изобранного' : 'Добавить в избранное'}
                   </AvaLеtter>
                 </MenuItem>
               </MenuList>

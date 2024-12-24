@@ -31,15 +31,15 @@
 }
 .modalBtn{
     padding: 10px auto;
-    background: var(--m3-sys-light-inverse-primary);
-    border: 1px solid var(--m3-sys-dark-outline);
+    background: var(--orange);
+    border: 1px solid var(--dark1);
 }
 .modalBtnSpan{
     font-family: var(--font-roboto-r);
     font-weight: 500;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--m3-white);
+    color: var(--white);
 
 }
 

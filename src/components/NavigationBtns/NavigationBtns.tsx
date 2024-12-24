@@ -14,8 +14,7 @@ const NavBtnsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  background: var(--m3-sys-light-surface-variant);
-
+  background: var(--dark1);
   @media (max-width: 1440px) {
     width: 124px;
     height: 64px;
@@ -44,8 +43,8 @@ const NavigationBtns:FC<PaginationProps> = ({onNextPageClick, onPrevPageClick, d
 
   return (
     <NavBtnsContainer>
-      <button className={style.arrow} disabled={disable.left} onClick={handlePrevPageClick}><img src={lArrow} alt='left arrow'></img></button>
-      <button className={style.arrow} disabled={disable.right} onClick={handleNextPageClick}><img src={rArrow} alt='right arrow'></img></button>
+      <button className={style.arrow} disabled={disable.left} onClick={handlePrevPageClick}><img src={lArrow} alt='левая стрелка'></img></button>
+      <button className={style.arrow} disabled={disable.right} onClick={handleNextPageClick}><img src={rArrow} alt='правая стрелка'></img></button>
       {/* <Arrow onClick={handlePrevPageClick}
         disabled={disable.left}>
         <img
